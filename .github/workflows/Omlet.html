@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Omlet</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+
+<link rel="shortcut icon" href="https://idp.omlet.me/arcade-favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="./Omlet_files/reset.css">
+<link type="text/css" rel="stylesheet" href="./Omlet_files/signin.css">
+<script type="text/javascript" async="" src="./Omlet_files/recaptcha__zh_tw.js.下載" crossorigin="anonymous" integrity="sha384-ntxFNHotUNI0qMM+9yizOevkYlcQjQ/VEtgPqUsx2VMl5XkNpQn2vbkE8amIMLMN"></script><script type="application/javascript" src="./Omlet_files/signin.js.下載"></script>
+<script src="./Omlet_files/api.js.下載" async="" defer=""></script>
+<script>
+  function onSubmit(token) {
+    window.grecaptcha.reset();
+    document.getElementById('signin-form').submit();
+  }
+
+  function validate(event) {
+    event.preventDefault();
+    if (!validateRegister()) {
+    } else {
+      window.grecaptcha.execute();
+    }
+  }
+
+  function onload() {
+    document.getElementById('signupbutton').onclick = validate;
+  }
+</script>
+</head>
+<body>
+<div class="container">
+<img class="logo" src="./Omlet_files/oma_arcadede_textlogo_promo.png">
+
+  <div class="textcenter title1 paddingTop">註冊</div>
+
+
+<div class="textcenter">
+<form id="signin-form" name="signin" method="post" action="https://idp.omlet.me/register?k=V7LCQUGGG7CR87UKM1B0&amp;er=https%3A%2F%2Fomlet.gg%2Fauthredirect&amp;l=zh-TW">
+  
+    <div class="textinputbox">
+      <img class="icon" src="./Omlet_files/oma_ic_login_username.png">
+      <input class="textinput" id="omid" name="omid" type="input" placeholder="設定 Omlet ID" value="">
+    </div>
+    <div id="iddes" class="des"><div id="idmsg" class="msg">Omlet ID 必須是 6-20 個字元長度（英文字母、數字、底線）</div></div>
+  
+  
+    <div class="textinputbox">
+      <img class="icon" src="./Omlet_files/oma_ic_login_password.png">
+      <input class="textinput" id="pass" name="pass" type="password" placeholder="密碼">
+    </div>
+    <div id="pdes" class="des"><div id="pmsg" class="msg">需要為 8-20 字元長度。</div></div>
+    <div class="textinputbox">
+      <img class="icon" src="./Omlet_files/oma_ic_login_password.png">
+      <input class="textinput" id="cpass" name="cpass" type="password" placeholder="確認您的密碼">
+    </div>
+    <div id="ppdes" class="des"><div id="ppmsg" class="msg">&nbsp;</div></div>
+    <div class="textinputbox">
+      <img class="icon" src="./Omlet_files/oma_ic_login_email.png">
+      <input class="textinput" id="email" name="email" type="input" placeholder="電子信箱 (非必填)" value="">
+    </div>
+    <div id="edes" class="des"><div id="emsg" class="msg">幫助你重新設定密碼。</div></div>
+  
+
+    <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcuUHwaAAAAALARGzyOrReuttM6UBnJfpraMFHP" data-callback="onSubmit" data-size="invisible"><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./Omlet_files/anchor.html" width="256" height="60" role="presentation" name="a-onswc6jfyw5j" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Omlet_files/saved_resource(1).html"></iframe></div>
+    <button id="signupbutton" class="circle-button mtx5 ripple">
+        <img src="./Omlet_files/oma_btn_signin_continue_normal.png">
+    </button>
+</form>
+<div id="signupmsg" class="message mtx2 hide">進行中 …</div>
+
+<div style="margin-top:10px;">
+<span>已經有 Omlet ID?</span>&nbsp;
+<a href="https://idp.omlet.me/login?k=V7LCQUGGG7CR87UKM1B0&amp;er=https%3A%2F%2Fomlet.gg%2Fauthredirect&amp;l=zh-TW"><button class="button2 mtx2 buttonS ripple">登入</button></a>
+</div>
+
+</div>
+
+
+  <div class="tos">完成註冊步驟代表您已同意 Omlet 的<a target="_blank" href="https://auto.omlet.me/legal/tos">隱私政策</a>以及<a target="_blank" href="https://auto.omlet.me/legal/privacy">使用條款</a></div>
+
+
+<div class="appending">&nbsp;</div>
+</div>
+<script>
+var _err = {};
+
+
+
+
+
+var _check = [];
+
+  _check.push({desEle:document.getElementById('iddes'),
+  msgEle:document.getElementById('idmsg'),
+  errs:[{code:'ioi', msg:"無效的 ID，Omlet ID 必須是 6-20 個字元長度。（英文字母 a-z、數字 0-9、底線）"},
+        {code:'oiae', msg:"此 ID 已被註冊。Omlet ID 必須是 6-20 個字元長度（英文字母、數字、底線）"}],
+  defaultMsg: "Omlet ID 必須是 6-20 個字元長度（英文字母、數字、底線）"});
+
+
+  _check.push({desEle:document.getElementById('pdes'),
+   msgEle:document.getElementById('pmsg'),
+   errs:[{code:'ip', msg:"無效密碼。需要為 8-20 字元長度，須包含至少一個數字及字母，不能與你的 ID 相同。"}],
+   defaultMsg: "需要為 8-20 字元長度。"});
+  _check.push({desEle:document.getElementById('ppdes'),
+   msgEle:document.getElementById('ppmsg'),
+   errs:[{code:'pnm', msg:"密碼無法對應"}],
+   defaultMsg: '&nbsp;'});
+  _check.push({desEle:document.getElementById('edes'),
+   msgEle:document.getElementById('emsg'),
+   errs:[{code:'ie', msg:"無效的電子信箱"}],
+   defaultMsg: "幫助你重新設定密碼。"
+ });
+
+
+checkForm();
+onload();
+</script>
+
+
+<div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: absolute; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255); overflow: hidden;"><iframe title="reCAPTCHA 驗證問題將在兩分鐘後失效" src="./Omlet_files/bframe.html" name="c-onswc6jfyw5j" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
