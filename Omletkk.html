@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://dxc232323.github.io/omlet.gg/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Omlet</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+
+<link rel="shortcut icon" href="https://idp.omlet.me/arcade-favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="./Omletkk_files/reset.css">
+<link type="text/css" rel="stylesheet" href="./Omletkk_files/signin.css">
+<link type="text/css" rel="stylesheet" href="./Omletkk_files/signin-v2.css">
+<script type="application/javascript" src="./Omletkk_files/signin.js.下載"></script>
+</head>
+<body>
+<div class="confirm-modal-bg-mask" id="reset-confirm">
+  
+</div>
+<div class="container">
+
+<div class="logo">
+  <div class="om-icon"></div>
+  <div class="om-text-brand"></div>
+</div>
+
+<div class="textcenter">
+<form name="signin" method="post" action="https://idp.omlet.me/login?k=VOMKSR1IL4RR1K36Q42G&amp;er=https%3A%2F%2Fomlet.gg%2Fauthredirect&amp;l=zh-TW" onsubmit="return validateLogin()">
+
+  <div class="textinputbox">
+    <img class="icon" src="./Omletkk_files/account.svg">
+    <input class="textinput" autocorrect="off" autocapitalize="off" id="omid" name="omid" type="input" placeholder="Omlet ID 或 Email" value="">
+  </div>
+  <div id="iddes" class="hide"><div id="idmsg" class="error"></div></div>
+
+  <div class="textinputbox">
+    <img class="icon" src="./Omletkk_files/password.svg">
+    <input class="textinput" autocorrect="off" autocapitalize="off" maxlength="20" id="pass" name="pass" type="password" placeholder="密碼">
+    <div class="pw-visible-btn" id="pw-visible-btn" onclick="togglePasswordVisibility()"></div>
+  </div>
+  <div id="pdes" class="hide"><div id="pmsg" class="error"></div></div>
+
+  <div class="forgotpw link"></div>
+  <button class="login-button" type="submit">
+    登入
+  </button>
+</form>
+</div>
+
+
+<div class="register textcenter">
+
+</div>
+
+<script>
+var _err = {};
+
+
+
+
+
+
+var _check = [{desEle:document.getElementById('iddes'),
+              msgEle:document.getElementById('idmsg'),
+              errs:[{code:'ioi', msg:"無效的 ID，Omlet ID 必須是 6-20 個字元長度。（英文字母 a-z、數字 0-9、底線）"},
+                    {code:'ie', msg:"無效的電子信箱"},
+                    {code:'inf', msg:"找不到此 Omlet ID"}]},
+             {desEle:document.getElementById('pdes'),
+              msgEle:document.getElementById('pmsg'),
+              errs:[{code:'ip', msg:"錯誤的密碼。"},
+                    {code:'pi', msg:"密碼不正確"},
+                    {code:'pns', msg:"尚未設定密碼，請點擊 “忘記密碼” 重新設定。"}]},
+            ];
+
+checkForm();
+checkErrorCountAlert();
+</script>
+<div class="appending">&nbsp;</div>
+</div>
+
+
+
+</body></html>
